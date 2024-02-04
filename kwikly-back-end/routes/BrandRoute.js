@@ -5,21 +5,21 @@ const {
   getSingleBrand,
   updateBrand,
   deleteBrand,
-} = require("../controllers/SubCategoryController");
+} = require("../controllers/BrandController");
 const {
-  getSubCategoryValidator,
-  createSubCategoryValidator,
-  updateSubCategoryValidator,
-  deleteSubCategoryValidator,
-} = require("../utils/validators/subCategoryValidator");
+  getBrandValidator,
+  createBrandValidator,
+  updateBrandValidator,
+  deleteBrandValidator,
+} = require("../utils/validators/brandValidator");
 
 const router = express.Router();
 
 // Define routes
-router.post("/create", createSubCategoryValidator, createBrand);
+router.post("/create", createBrandValidator, createBrand);
 router.get("/getAll", getBrands);
-router.get("/getById/:id", getSubCategoryValidator, getSingleBrand);
-router.put("/update/:id", updateSubCategoryValidator, updateBrand);
-router.delete("/delete/:id", deleteSubCategoryValidator, deleteBrand);
+router.get("/getById/:id", getBrandValidator, getSingleBrand);
+router.put("/update/:id", updateBrandValidator, updateBrand);
+router.delete("/delete/:id", deleteBrandValidator, deleteBrand);
 
 module.exports = router;
