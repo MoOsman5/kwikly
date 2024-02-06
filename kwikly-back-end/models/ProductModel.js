@@ -38,10 +38,10 @@ const productSchema = new mongoose.Schema(
     },
     colors: [String],
 
-    imageCover: {
-      type: String,
-      required: [true, 'Product Image cover is required'],
-    },
+    // imageCover: {
+    //   type: String,
+    //   required: [true, 'Product Image cover is required'],
+    // },
     images: [String],
     category: {
       type: mongoose.Schema.ObjectId,
